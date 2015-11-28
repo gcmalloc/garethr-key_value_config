@@ -1,6 +1,6 @@
-require 'etcd'
 
 Puppet::Type.type(:key_value_config).provide(:etcd) do
+  require 'etcd'
   confine feature: :etcd
   mk_resource_methods
 
